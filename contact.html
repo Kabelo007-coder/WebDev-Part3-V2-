@@ -27,13 +27,11 @@
         <h2>Get in Touch</h2>
         <p>If you have any questions or inquiries, please feel free to reach out to us using the contact information below:</p>
         <ul>
-            <li>Email: <a href="kaysclothingweb@gmail.com">kaysclothingweb</a></li>
+            <li>Email: <a href="mailto:kaysclothingweb@gmail.com">kaysclothingweb@gmail.com</a></li>
             <li>Phone: <a href="tel:+271234567890">+27 123 456 7890</a></li>
             <li>Address: 239 Pretorius St, Pretoria Central, Pretoria, 0126</li>
             </ul>
 
-            <!--Google Maps Location-->
-            <!--Google Maps Location-->
             <section aria-labelledby="map-title">
                 <h2 id="map-title">Find Us</h2>
                 <ul class="details" id="locations">
@@ -46,7 +44,6 @@
                     <button class="btn secondary" type="button" id="go-both">Show both</button>
                 </p>
 
-  <!-- WRAPPED MAPS WITH IDs -->
   <div id="map-pretoria" class="map-box">
     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3593.684507248555!2d28.187613275690982!3d-25.747944877360556!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e9561eb88fde125%3A0xa6b2b426ca41034!2sRosebank%20College%20Pretoria%20Campus!5e0!3m2!1sen!2sza!4v1786735113993!5m2!1sen!2sza" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
   </div>
@@ -58,7 +55,10 @@
 </section>
             <section aria-labelledby="msg-title">
                 <h2 id="msg-title">Send Us a Message</h2>
-                <form id="contact-form" novalidate autocomplete="on">
+                <form id="contact-form" action="https://formspree.io/f/mrppoyrk" method="POST" autocomplete="on">
+                    <input type="hidden" name="_subject" value="New Contact Message - Kay's Clothing Co">
+                    <input type="hidden" name="_captcha" value="false">
+                    
                     <div class="field">
                         <label for="name">Name</label>
                         <input type="text" id="name" name="name" required minlength="2" maxlength="60" autocomplete="name">
@@ -94,17 +94,14 @@
                     </div>
                     <div class="hp" aria-hidden="true">
                         <label for="website">Leave this field empty</label>
-                        <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+                        <input type="text" id="website" name="_gotcha" tabindex="-1" autocomplete="off">
                     </div>
-                    <button class="btn" type="submit">Create email</button>
+                    <button class="btn" type="submit">Send Message</button>
                     <div class="form-status" id="contact-status" role="status" aria-live="polite"></div>
                 </form>
                 <div class="quote" id="email-out" hidden></div>
             </section>
         </div>
-    </main>
-    
-        </section>
     </main>
     <script src="kayscript.js"></script>
     <footer>
