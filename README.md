@@ -52,7 +52,7 @@ This site is automatically deployed via Netlify from GitHub.
 
 ## Author
 
-**Kabelo Mogale**
+**Kay's Clothing Co**
 - Website: **[https://kaysclothingco.netlify.app/](https://kaysclothingco.netlify.app/)**
 - Location: South Africa
 
