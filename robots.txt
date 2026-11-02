@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://kaysclothingco.netlify.app/sitemap.xml
