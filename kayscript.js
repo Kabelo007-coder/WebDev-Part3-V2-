@@ -1,17 +1,17 @@
-/* MOBILE MENU */
-const menuToggle = document.querySelector('.menu-toggle');
-const navLinks = document.querySelector('.nav-links, .navbar ul, nav ul');
+/* MOBILE MENU - CORRECT CLASSES */
+const navToggle = document.getElementById('nav-toggle');
+const siteNav = document.getElementById('site-nav');
 
-if (menuToggle && navLinks) {
-  menuToggle.addEventListener('click', function() {
-    navLinks.classList.toggle('active');
-    // change button from ☰ to X when open
-    if (navLinks.classList.contains('active')) {
-      menuToggle.textContent = '✕';
-    } else {
-      menuToggle.textContent = '☰';
-    }
+if (navToggle && siteNav) {
+  navToggle.addEventListener('click', function() {
+    const isOpen = siteNav.classList.toggle('open');
+    navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    navToggle.textContent = isOpen ? '✕' : '☰';
   });
+}
+// Set initial hamburger icon
+if (navToggle) {
+  navToggle.textContent = '☰';
 }
 /* SHARED HELPER */
 // Turn a number like 189 into the text "R189.00" (used on the services and enquiries pages)
