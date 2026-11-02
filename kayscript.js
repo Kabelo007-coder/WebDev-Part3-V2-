@@ -303,3 +303,46 @@ if (contactForm) {
     }
   });
 }
+
+// ENQUIRIES FORM SUBMIT - FIXED FOR FORMSPREE
+const enquiryForm = document.getElementById('enquiry-form');
+const enquiryStatus = document.getElementById('enquiry-status');
+const quoteBox = document.getElementById('quote');
+
+if (enquiryForm) {
+  enquiryForm.addEventListener('submit', async function(e) {
+    e.preventDefault();
+
+    const formData = new FormData(enquiryForm);
+    // honeypot check
+    if (formData.get('_gotcha')) return;
+
+    enquiryStatus.textContent = "Sending...";
+    enquiryStatus.style.color = "#fbbf24";
+
+    try {
+      const response = await fetch(enquiryForm.action, {
+        method: 'POST',
+        body: formData,
+        headers: { 'Accept': 'application/json' }
+      });
+
+      if (response.ok) {
+        enquiryStatus.textContent = "✓ Enquiry sent! We'll contact you soon.";
+        enquiryStatus.style.color = "#4ade80";
+        if (quoteBox) {
+          quoteBox.hidden = false;
+          quoteBox.innerHTML = `<div style="background:#0f2442; border:1px solid #fbbf24; padding:20px; border-radius:8px; color:white;">Enquiry received! We will reply to <strong>${formData.get('email')}</strong> within 24 hours.</div>`;
+        }
+        enquiryForm.reset();
+        const len = document.getElementById('message-length');
+        if (len) len.textContent = "0";
+      } else {
+        throw new Error('Failed');
+      }
+    } catch (err) {
+      enquiryStatus.textContent = "Error. Please email us at kaysclothingweb@gmail.com";
+      enquiryStatus.style.color = "#fca5a5";
+    }
+  });
+}
