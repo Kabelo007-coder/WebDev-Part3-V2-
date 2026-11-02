@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Gallery</title>
+    <link rel="stylesheet" href="mywebstyles.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="wrap">
+            <a class="brand" href="index.html" aria-label="Kay's Clothing Co home">
+                
+            </a>
+            <nav class="site-nav" id="site-nav" aria-label="Main navigation">
+                <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html">Our Services</a></li>
+                <li><a href="gallery.html" aria-current="page">Gallery</a></li>
+                <li><a href="enquiries.html">Enquiries</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+            <img src="_images/Kays-Clothing-Co-Logo-3.png" alt="Kay's Clothing Co Logo" width="84" height="84" class="logo">
+        </div>
+    </header>
+
+    <main id="main">
+        <div class="wrap">
+            <section aria-labelledby="gallery-title">
+                <h1 id="gallery-title">Our Gallery</h1>
+                <p>Our uniforms and workwear on site. Select any photo to view it larger, then use the arrow buttons or the arrow keys to move between photos.</p>
+                <div class="gallery" id="workwearGallery">
+                 <button type="button"><img src="_images/Hero-Photo.jpg" alt="Kay's Hero Photo" loading="lazy"></button>
+                 <button type="button"><img src="_images/Kays-Products-1.jpg" alt="Kay's Reflector Vest" loading="lazy"></button>
+                 <button type="button"><img src="_images/Jacket.jpg" alt="Kay's Jacket" loading="lazy"></button>
+                 <button type="button"><img src="_images/Kays-Products-4.jpg" alt="Kay's Trousers" loading="lazy"></button>
+                 <button type="button"><img src="_images/Kays-Products-3.jpg" alt="Kay's Tool Belts" loading="lazy"></button>
+                 <button type="button"><img src="_images/Tool-Belt-2.jpg" alt="Kay's Tool Belt 2" loading="lazy"></button>
+                </div>
+            </section>
+            <p><a class="btn" href="enquiries.html">Request a quote</a> <a class="btn secondary" href="services.html">See our products</a></p>
+        </div>
+    </main>
+    <!-- Lightbox - classes must match your css -->
+    <div class="lightbox-backdrop" id="lightbox">
+        <div class="lightbox-box" role="dialog" aria-modal="true" aria-label="Image viewer">
+            <button class="close-btn" id="lightbox-close" type="button">&times;</button>
+            <figure style="margin:0">
+                <img id="lightbox-img" src="" alt="">
+                <figcaption id="lightbox-caption"></figcaption>
+            </figure>
+            <div class="lightbox-controls">
+                <button id="lightbox-prev" type="button">Prev</button>
+                <button id="lightbox-next" type="button">Next</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="kayscript.js"></script>
+</body>
+</html>
