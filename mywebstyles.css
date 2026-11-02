@@ -643,3 +643,30 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     padding: 10px;
   }
 }
+
+/* FIX FOR PHONE */
+@media screen and (max-width: 768px) {
+  .hero {
+    flex-direction: column !important;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .hero h1 {
+    font-size: 28px !important;
+    line-height: 1.2;
+    word-wrap: break-word;
+    white-space: normal !important;
+  }
+
+  .hero p {
+    font-size: 16px !important;
+    padding: 0 15px;
+  }
+
+  .hero img, .hero-image img {
+    width: 100% !important;
+    max-width: 100%;
+    height: auto;
+  }
+}
