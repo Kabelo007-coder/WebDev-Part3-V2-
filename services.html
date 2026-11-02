@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services</title>
+    <link rel="stylesheet" href= "mywebstyles.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+        <ul>
+            <li><a href="index.html">Home</a> </li>
+            <li><a href="about.html">About Us</a> </li>
+            <li><a href="services.html">Our Services</a> </li>
+            <li><a href="gallery.html">Gallery</a> </li>
+            <li><a href="enquiries.html">Enquiries</a> </li>
+            <li><a href="contact.html">Contact Us</a> </li>
+        </ul>
+        </nav>
+        <h1>Our Services</h1>
+        <img class="logo" src="_images/Kay's Clothing Co Logo 3.png" alt="Kay's Clothing Co Logo">
+        
+    </header>
+
+    <main id="main">
+        <div class="wrap">
+            <section aria-labelledby="services-title">
+                <h1 id="services-title">Our Services</h1>
+                <p>At Kay's Clothing Co., we offer a range of services to meet the needs of our customers. Select a service to read more.</p>
+                <div class="accordion" data-accordion>
+                <div class="accordion-item">
+                    <h3>
+                        <button class="accordion-trigger" type="button" id="acc-btn-1" aria-expanded="false" aria-controls="acc-panel-1">Custom uniform design and manufacturing</button>
+                    </h3>
+                    <div class="accordion-panel" id="acc-panel-1" role="region" aria-labelledby="acc-btn-1">
+                        <div><p>We design and make uniforms around the way your team works: colours, pocket sizes for pliers and testers, and your logo or company name.</p></div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h3>
+                        <button class="accordion-trigger" type="button" id="acc-btn-2" aria-expanded="false" aria-controls="acc-panel-2">Bulk order processing for large teams</button>
+                    </h3>
+                    <div class="accordion-panel" id="acc-panel-2" role="region" aria-labelledby="acc-btn-2">
+                        <div><p>Ordering for a crew or several sites? We handle bulk orders so every team member receives a consistent uniform.</p></div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h3>
+                        <button class="accordion-trigger" type="button" id="acc-btn-3" aria-expanded="false" aria-controls="acc-panel-3">Regular supply chain management for consistent inventory</button>
+                    </h3>
+                    <div class="accordion-panel" id="acc-panel-3" role="region" aria-labelledby="acc-btn-3">
+                        <div><p>We help you re-order on a schedule, so replacements and new starters are always covered.</p></div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h3>
+                        <button class="accordion-trigger" type="button" id="acc-btn-4" aria-expanded="false" aria-controls="acc-panel-4">Consultation on safety compliance and brand image</button>
+                    </h3>
+                    <div class="accordion-panel" id="acc-panel-4" role="region" aria-labelledby="acc-btn-4">
+                        <div><p>Talk to us about the safety requirements that apply to your work and how to present a professional brand on site.</p></div>
+                    </div>
+                </div>
+                </div>
+            </section>
+
+            <section aria-labelledby="products-title">
+                <h2 id="products-title">Our Products</h2>
+                <form id="product-filters" class="toolbar" role="search" aria-label="Search and filter products" style="max-width:none">
+                    <div class="field">
+                        <label for="product-search">Search products</label>
+                        <input type="search" id="product-search" maxlength="60" placeholder="e.g. vest, jacket, pockets" autocomplete="off">
+                    </div>
+                    <div class="field">
+                        <label for="product-category">Category</label>
+                        <select id="product-category">
+                            <option value="">All categories</option>
+                            <option value="Accessories">Accessories</option>
+                            <option value="Hi-vis">Hi-vis</option>
+                            <option value="Jackets">Jackets</option>
+                            <option value="Trousers">Trousers</option>
+                        </select>
+                    </div>
+                    <div class="field">
+                        <label for="product-sort">Sort by</label>
+                        <select id="product-sort">
+                            <option value="name">Name (A to Z)</option>
+                            <option value="price-asc">Price: low to high</option>
+                            <option value="price-desc">Price: high to low</option>
+                            <option value="stock">Most in stock</option>
+                        </select>
+                    </div>
+                </form>
+                <p class="result-count" id="result-count" aria-live="polite"></p>
+                <div class="product-grid" id="product-grid">
+                    <article class="product-card" data-id="vest" data-name="Reflector Vests" data-category="Hi-vis" data-price="189" data-stock="240" data-lead="7">
+                       <button type="button" class="thumb" data-src="_images/Kays-Products-1.jpg" alt="Kay's Reflector Vest">
+                    <img src="_images/Kays-Products-1.jpg" alt="Kay's Reflector Vest" width="400" height="300" loading="lazy">
+                </button>
+                        <div class="body">
+                            <h3>Reflector Vests</h3>
+                            <p><span class="tag">Hi-vis</span></p>
+                            <p class="description">High-visibility vests with reflective strips so your team is seen on site, in any light.</p>
+                            <p class="price">From R189.00 each</p>
+                            <p class="stock in">In stock (240 available)</p>
+                            <button class="btn secondary details-btn" type="button">View details</button>
+                        </div>
+                    </article>
+                    <article class="product-card" data-id="belts" data-name="Tool Belts/Bags" data-category="Accessories" data-price="429" data-stock="0" data-lead="14">
+                        <button type="button" class="thumb" data-src="_images/Kays-Products-3.jpg" alt="Kay's Tool Belts">
+                    <img src="_images/Kays-Products-3.jpg" alt="Kay's Tool Belts" width="400" height="300" loading="lazy">
+                </button>
+                        <div class="body">
+                            <h3>Tool Belts/Bags</h3>
+                            <p><span class="tag">Accessories</span></p>
+                            <p class="description">Tool belts and bags that keep testers and hand tools within easy reach.</p>
+                            <p class="price">From R429.00 each</p>
+                            <p class="stock out">Out of stock - made to order (about 14 working days)</p>
+                            <button class="btn secondary details-btn" type="button">View details</button>
+                        </div>
+                    </article>
+                    <article class="product-card" data-id="jackets" data-name="Workwear Jackets" data-category="Jackets" data-price="549" data-stock="8" data-lead="12">
+                        <button type="button" class="thumb" data-src="_images/Kays-Jacket.jpg" alt="Kay's Jacket">
+                    <img src="_images/Jacket.jpg" alt="Kay's Jacket" width="400" height="300" loading="lazy">
+                </button>
+                        <div class="body">
+                            <h3>Workwear Jackets</h3>
+                            <p><span class="tag">Jackets</span></p>
+                            <p class="description">Weather-ready jackets in high-visibility yellow with reflective bands.</p>
+                            <p class="price">From R549.00 each</p>
+                            <p class="stock low">Low stock - only 8 left</p>
+                            <button class="btn secondary details-btn" type="button">View details</button>
+                        </div>
+                    </article>
+                    <article class="product-card" data-id="trousers" data-name="Workwear Trousers" data-category="Trousers" data-price="349" data-stock="120" data-lead="10">
+                        <button type="button" class="thumb" data-src="_images/Kays-Products-4.jpg" alt="Kay's Trousers"> 
+                    <img src="_images/Kays-Products-4.jpg" alt="Kay's Trousers" width="400" height="300" loading="lazy">
+                </button>
+                        <div class="body">
+                            <h3>Workwear Trousers</h3>
+                            <p><span class="tag">Trousers</span></p>
+                            <p class="description">Hard-wearing trousers with pockets sized for pliers, testers and screwdrivers.</p>
+                            <p class="price">From R349.00 each</p>
+                            <p class="stock in">In stock (120 available)</p>
+                            <button class="btn secondary details-btn" type="button">View details</button>
+                        </div>
+                    </article>
+                </div>
+                <p class="empty" id="no-results" hidden>No products match your search. Clear the search box or choose "All categories".</p>
+                <p style="margin-top:1.5rem"><a class="btn" href="enquiries.html">Enquire about a product</a></p>
+            </section>
+        </div>
+    </main>
+
+    <!-- Lightbox: the big image viewer (opened by kayscript.js) -->
+    <div class="modal-backdrop" id="lightbox">
+        <div class="modal lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
+            <button class="modal-close" id="lightbox-close" type="button" aria-label="Close image viewer">&times;</button>
+            <figure style="margin:0">
+                <img id="lightbox-img" src="" alt="">
+                <figcaption id="lightbox-caption"></figcaption>
+            </figure>
+            <div class="lb-controls">
+                <button class="lb-nav" id="lightbox-prev" type="button" aria-label="Previous image">&lsaquo;</button>
+                <button class="lb-nav" id="lightbox-next" type="button" aria-label="Next image">&rsaquo;</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Product details pop-up (opened by products.js) -->
+    <div class="modal-backdrop" id="product-modal">
+        <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-name">
+            <button class="modal-close" id="product-modal-close" type="button" aria-label="Close product details">&times;</button>
+            <h2 id="modal-name"></h2>
+            <img id="modal-image" src="" alt="" width="400" height="200" style="width:100%;border-radius:6px">
+            <p id="modal-description"></p>
+            <p id="modal-price"></p>
+            <p id="modal-stock"></p>
+            <a class="btn" id="modal-link" href="enquiries.html">Enquire about this product</a>
+        </div>
+    </div>
+    <script src="kayscript.js"></script>
+    <script src="products.js"></script>
+    <footer>
+
+        <p>&copy; Kay's Clothing Co. All rights reserved. 2026.</p>
+    </footer>
+</body>
+</html>
