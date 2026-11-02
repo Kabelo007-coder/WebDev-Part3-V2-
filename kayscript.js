@@ -232,16 +232,15 @@ if (contactMsg && contactCount) {
   updateCount(); // set initial 0/1000
 }
 
-//CONTACT FORM SUBMIT
+//CONTACT FORM SUBMIT - FIXED FOR FORMSPREE
 const contactForm = document.getElementById('contact-form');
 const contactStatus = document.getElementById('contact-status');
 const emailOut = document.getElementById('email-out');
 
 if (contactForm) {
-  contactForm.addEventListener('submit', function(e) {
-    e.preventDefault(); // stops Outlook
+  contactForm.addEventListener('submit', async function(e) {
+    e.preventDefault();
 
-    // basic validation (same as enquiries)
     const name = document.getElementById('name').value.trim();
     const email = document.getElementById('email').value.trim();
     const message = document.getElementById('message').value.trim();
@@ -268,26 +267,39 @@ if (contactForm) {
       return;
     }
 
-    // success - same style as enquiries
-    contactStatus.textContent = "✓ Message ready! We'll get back to you shortly.";
-    contactStatus.style.color = "#4ade80";
-    
-    // show formatted quote like enquiries page does
-    if (emailOut) {
-      emailOut.hidden = false;
-      emailOut.innerHTML = `
-        <div style="background:#0f2442; border:1px solid #fbbf24; padding:20px; border-radius:8px; margin-top:20px; color:white;">
-          <h3 style="color:#fbbf24; margin-top:0;">Your Message</h3>
-          <p><strong>From:</strong> ${name} (${email})</p>
-          <p><strong>Type:</strong> ${type}</p>
-          <p><strong>Message:</strong><br>${message.replace(/\n/g, '<br>')}</p>
-          <p style="font-size:13px; color:#94a3b8; margin-top:15px;">In a real site this would email to info@kaysclothingco.co.za - for now it's showing here for your assignment.</p>
-        </div>
-      `;
-    }
+    contactStatus.textContent = "Sending...";
+    contactStatus.style.color = "#fbbf24";
 
-    contactForm.reset();
-    // reset counter
-    if (contactCount) contactCount.textContent = "0 / 1000";
+    try {
+      const formData = new FormData(contactForm);
+      const response = await fetch(contactForm.action, {
+        method: 'POST',
+        body: formData,
+        headers: { 'Accept': 'application/json' }
+      });
+
+      if (response.ok) {
+        contactStatus.textContent = "✓ Message sent! We'll get back to you shortly.";
+        contactStatus.style.color = "#4ade80";
+        if (emailOut) {
+          emailOut.hidden = false;
+          emailOut.innerHTML = `
+            <div style="background:#0f2442; border:1px solid #fbbf24; padding:20px; border-radius:8px; margin-top:20px; color:white;">
+              <h3 style="color:#fbbf24; margin-top:0;">Message Sent!</h3>
+              <p><strong>From:</strong> ${name} (${email})</p>
+              <p><strong>Type:</strong> ${type}</p>
+              <p>Your message was sent to our team. Check your email for confirmation.</p>
+            </div>
+          `;
+        }
+        contactForm.reset();
+        if (contactCount) contactCount.textContent = "0 / 1000";
+      } else {
+        throw new Error('Failed');
+      }
+    } catch (err) {
+      contactStatus.textContent = "Error sending. Please try again or email us directly at kaysclothingweb@gmail.com";
+      contactStatus.style.color = "#fca5a5";
+    }
   });
 }
