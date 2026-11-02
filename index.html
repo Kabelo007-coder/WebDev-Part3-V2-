@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kay's Clothing Co</title>
+    <link rel="stylesheet" href="mywebstyles.css">
+</head>
+<body>
+
+    <header>
+        <div id="wrapper">
+        
+        <nav class="site-nav" id="site-nav" aria-label="Main site navigation">    
+        <ul>
+            <li><a href="index.html">Home</a> </li>
+            <li><a href="about.html">About Us</a> </li>
+            <li><a href="services.html">Our Services</a> </li>
+            <li><a href="gallery.html">Gallery</a> </li>
+            <li><a href="enquiries.html">Enquiries</a> </li>
+            <li><a href="contact.html">Contact Us</a> </li>
+        </ul>
+        </nav>
+        <img src="_images/Kays-Clothing-Co-Logo-3.png" alt="Kay's Clothing Co Logo" width="84" height="84" class="logo">
+        <button class="nav-toggle" id="nav-toggle" aria-controls="site-nav" aria-expanded="false" aria-label="Open menu"></button>
+    </header>
+
+    <section class="hero-overlay" aria-labelledby="hero-title">
+        <img class="hero-img" src="_images/Hero-Photo.jpg" alt="Kay's Hero Photo" width="1400" height="934" fetchpriority="high"><br>
+        <div class="hero-content">
+            <div class="wrap">
+                <h1 id="hero-title">Welcome to Kay's Clothing Co.</h1>
+                <p>We bring nothing but the best quality workwear and uniforms to our customers.
+                   We are a dedicated supplier of uniforms and workwear for electricians.
+                   Trust us to provide you with the best quality workwear and uniforms for your business.</p>
+                <a class="btn" href="enquiries.html">Request a quote</a>
+            </div>
+        </div>
+    </section>
+    
+    
+    <main id="main">
+        <div class="wrap">
+            <section class="split reveal" aria-labelledby="vision-title">
+                <div>
+                    <h2 id="vision-title">Trusted uniform suppliers for electrical trades</h2>
+                    <p>We want to be trusted uniform suppliers of choice for electrical trade businesses,
+                       known for combining safety compliance, comfort and a professional brand image
+                       in the industry.</p>
+                    <p>Kay's Clothing Co. was founded to solve problems for companies in need of uniforms.
+                       The founder saw firsthand while electricians were working on residential and commercial
+                       sites that the standard workwear was not built for the job. Off-the-shelf uniform tore easier
+                       and lacked proper pocket sizes for tools (pliers and testers) and offered little protection against
+                       flash skin and static risks. We started with small production of trousers and shirts for local
+                       electrical contracting firms. The company grew into a dedicated supplier of uniforms and workwear
+                       for electricians, now serving independent tradespeople and smaller contracting businesses.</p>
+                    <p><a class="btn secondary" href="about.html">Read more about us</a></p>
+                </div>
+                <img class="responsive-image" src="_images/Portrait-Image.jpg" alt="Kay's Clothing Co. Portrait">
+            </section>
+
+            <div class="container">
+                <div>
+        <p>
+        Kay's Clothing Co. was founded to solve problems for companies in need of uniforms.<br>
+        The founder saw firsthand while electricians were working on residential and commercial<br> 
+        sites that the standard workwear was not built for the job. Off-the-shelf uniform tore easier<br> 
+        and lacked proper pocket sizes for tools(pliers and testers) and offered little protection against<br> 
+        flash skin and static risks. We started with small production of trousers and shirts for local<br>
+        electrical contracting firms. The company grew into a dedicated supplier of uniforms and workwear<br>
+        for electricians, now serving independent tradespeople and smaller contracting businesses.
+        </p>
+        </div>
+        </div>
+        <section class="reveal" aria-labelledby="gallery-title">
+                <h2 id="gallery-title">Workwear on site</h2>
+                <p>This is our workwear, click any image to view it larger.</p>
+                <div class="gallery">
+                <button type="button" data-src="_images/Hero-Photo.jpg" alt="Kay's Hero Photo">
+                    <img src="_images/Hero-Photo.jpg" alt="Kay's Hero Photo" width="400" height="300" loading="lazy">
+                </button>
+                <button type="button" data-src="_images/Kays-Products-1.jpg" alt="Kay's Reflector Vest">
+                    <img src="_images/Kays-Products-1.jpg" alt="Kay's Reflector Vest" width="400" height="300" loading="lazy">
+                </button>
+                <button type="button" data-src="_images/Jacket.jpg" alt="Kay's Jacket">
+                    <img src="_images/Jacket.jpg" alt="Kay's Jacket" width="400" height="300" loading="lazy">
+                </button>
+                <button type="button" data-src="_images/Kays-Products-4.jpg" alt="Kay's Trousers"> 
+                    <img src="_images/Kays-Products-4.jpg" alt="Kay's Trousers" width="400" height="300" loading="lazy">
+                </button>
+                <button type="button" data-src="_images/Kays-Products-3.jpg" alt="Kay's Tool Belts">
+                    <img src="_images/Kays-Products-3.jpg" alt="Kay's Tool Belts" width="400" height="300" loading="lazy">
+                </button>
+                <button type="button" data-src="_images/Tool-Belt-2.jpg" alt="Kay's Tool Belt 2">
+                    <img src="_images/Tool-Belt-2.jpg" alt="Kay's Tool Belt 2" width="400" height="300" loading="lazy">
+                </button>
+                </div>
+            </section>
+    </main>
+    <!-- Lightbox: the big image viewer (opened by script.js) -->
+    <div class="modal-backdrop" id="lightbox">
+        <div class="modal lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
+            <button class="modal-close" id="lightbox-close" type="button" aria-label="Close image viewer">&times;</button>
+            <figure style="margin:0">
+                <img id="lightbox-img" src="" alt="">
+                <figcaption id="lightbox-caption"></figcaption>
+            </figure>
+            <div class="lb-controls">
+                <button class="lb-nav" id="lightbox-prev" type="button" aria-label="Previous image">&lsaquo;</button>
+                <button class="lb-nav" id="lightbox-next" type="button" aria-label="Next image">&rsaquo;</button>
+            </div>
+        </div>
+    </div>
+    <script src="kayscript.js"></script>
+    <footer>
+
+        <p>&copy; Kay's Clothing Co. All rights reserved. 2026.</p>
+    </footer>
+</body>
+</html>
