@@ -1,4 +1,19 @@
-  /* SHARED HELPER */
+/* MOBILE MENU */
+const menuToggle = document.querySelector('.menu-toggle');
+const navLinks = document.querySelector('.nav-links, .navbar ul, nav ul');
+
+if (menuToggle && navLinks) {
+  menuToggle.addEventListener('click', function() {
+    navLinks.classList.toggle('active');
+    // change button from ☰ to X when open
+    if (navLinks.classList.contains('active')) {
+      menuToggle.textContent = '✕';
+    } else {
+      menuToggle.textContent = '☰';
+    }
+  });
+}
+/* SHARED HELPER */
 // Turn a number like 189 into the text "R189.00" (used on the services and enquiries pages)
 function money(amount) {
     return 'R' + amount.toFixed(2);
