@@ -4,24 +4,23 @@
 
   <url>
     <loc>https://kaysclothingco.netlify.app/</loc>
-    <image:image>
-      <image:loc>https://kaysclothingco.netlify.app/_images/Kays-Hero-Photo.jpg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://kaysclothingco.netlify.app/_images/Kays-Clothing-Logo-3.png</image:loc>
-    </image:image>
   </url>
 
   <url>
     <loc>https://kaysclothingco.netlify.app/gallery.html</loc>
-    <image:image><image:loc>https://kaysclothingco.netlify.app/_images/Kays-Jacket.jpg</image:loc></image:image>
-    <image:image><image:loc>https://kaysclothingco.netlify.app/_images/Tool-Belt-2.jpg</image:loc></image:image>
+    <image:image><image:loc>https://kaysclothingco.netlify.app/_images/Email.jpg</image:loc></image:image>
+    <image:image><image:loc>https://kaysclothingco.netlify.app/_images/Hero-Photo.jpg</image:loc></image:image>
+    <image:image><image:loc>https://kaysclothingco.netlify.app/_images/Kays-Clothing-Logo-3.jpg</image:loc></image:image>
+    <image:image><image:loc>https://kaysclothingco.netlify.app/_images/Kays-Email.jpg</image:loc></image:image>
+    <image:image><image:loc>https://kaysclothingco.netlify.app/_images/Kays-Email-Image.jpg</image:loc></image:image>
+    <image:image><image:loc>https://kaysclothingco.netlify.app/_images/Kays-Hero-Photo.jpg</image:loc></image:image>
     <image:image><image:loc>https://kaysclothingco.netlify.app/_images/Kays-Products-1.jpg</image:loc></image:image>
     <image:image><image:loc>https://kaysclothingco.netlify.app/_images/Kays-Products-2.jpg</image:loc></image:image>
     <image:image><image:loc>https://kaysclothingco.netlify.app/_images/Kays-Products-3.jpg</image:loc></image:image>
     <image:image><image:loc>https://kaysclothingco.netlify.app/_images/Kays-Products-4.jpg</image:loc></image:image>
-    <image:image><image:loc>https://kaysclothingco.netlify.app/_images/Hero-Photo.jpg</image:loc></image:image>
     <image:image><image:loc>https://kaysclothingco.netlify.app/_images/Portrait-Image.jpg</image:loc></image:image>
+    <image:image><image:loc>https://kaysclothingco.netlify.app/_images/Tool-Belt-2.jpg</image:loc></image:image>
+    <image:image><image:loc>https://kaysclothingco.netlify.app/_images/Kays-Jacket.jpg</image:loc></image:image>
     <image:image><image:loc>https://kaysclothingco.netlify.app/_images/Sitemap.png</image:loc></image:image>
   </url>
 
@@ -31,9 +30,6 @@
 
   <url>
     <loc>https://kaysclothingco.netlify.app/contact.html</loc>
-    <image:image><image:loc>https://kaysclothingco.netlify.app/_images/Kays-Email.jpg</image:loc></image:image>
-    <image:image><image:loc>https://kaysclothingco.netlify.app/_images/Kays-Email-Image.jpg</image:loc></image:image>
-    <image:image><image:loc>https://kaysclothingco.netlify.app/_images/Email.jpg</image:loc></image:image>
   </url>
 
 </urlset>
