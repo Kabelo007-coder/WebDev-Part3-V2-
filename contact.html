@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href= "mywebstyles.css">
+</head>
+<body>
+    <header>
+        <nav>
+        <ul>
+            <li><a href="index.html">Home</a> </li>
+            <li><a href="about.html">About Us</a> </li>
+            <li><a href="services.html">Our Services</a> </li>
+            <li><a href="gallery.html">Gallery</a> </li>
+            <li><a href="enquiries.html">Enquiries</a> </li>
+            <li><a href="contact.html">Contact Us</a> </li>
+        </ul>
+        </nav>
+        <h1>Contact Us</h1>
+    <img class="logo" src="_images/Kays-Clothing-Co-Logo-3.png" alt="Kay's Clothing Co Logo">      
+    </header>
+
+    <main>
+    <section id="contact">
+        <h2>Get in Touch</h2>
+        <p>If you have any questions or inquiries, please feel free to reach out to us using the contact information below:</p>
+        <ul>
+            <li>Email: <a href="info@kaysclothingco.co.za">info@kaysclothingco.co.za</a></li>
+            <li>Phone: <a href="tel:+271234567890">+27 123 456 7890</a></li>
+            <li>Address: 239 Pretorius St, Pretoria Central, Pretoria, 0126</li>
+            </ul>
+
+            <!--Google Maps Location-->
+            <!--Google Maps Location-->
+            <section aria-labelledby="map-title">
+                <h2 id="map-title">Find Us</h2>
+                <ul class="details" id="locations">
+                    <li data-lat="-25.74794" data-lng="28.18761"><strong>Kay's Clothing Co - Pretoria</strong><br>239 Pretorius St, Pretoria Central, Pretoria, 0126</li>
+                    <li data-lat="-26.19257" data-lng="28.03131"><strong>Kay's Clothing Co - Johannesburg</strong><br>Braamfontein, Johannesburg</li>
+                </ul>
+                <p>
+                    <button class="btn secondary" type="button" id="go-pretoria">Pretoria</button>
+                    <button class="btn secondary" type="button" id="go-johannesburg">Johannesburg</button>
+                    <button class="btn secondary" type="button" id="go-both">Show both</button>
+                </p>
+
+  <!-- WRAPPED MAPS WITH IDs -->
+  <div id="map-pretoria" class="map-box">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3593.684507248555!2d28.187613275690982!3d-25.747944877360556!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e9561eb88fde125%3A0xa6b2b426ca41034!2sRosebank%20College%20Pretoria%20Campus!5e0!3m2!1sen!2sza!4v1786735113993!5m2!1sen!2sza" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+  </div>
+
+  <div id="map-johannesburg" class="map-box" style="display:none;">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3580.12624036193!2d28.03131357570503!3d-26.192571377083798!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e950b9300000001%3A0x335d35f228da3ccd!2sRosebank%20International%20%7C%20Braamfontein%20Campus!5e0!3m2!1sen!2sza!4v1786739762674!5m2!1sen!2sza" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+  </div>
+
+</section>
+            <section aria-labelledby="msg-title">
+                <h2 id="msg-title">Send Us a Message</h2>
+                <form id="contact-form" novalidate autocomplete="on">
+                    <div class="field">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required minlength="2" maxlength="60" autocomplete="name">
+                        <p class="error-msg" role="alert"></p>
+                    </div>
+                    <div class="field">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required maxlength="254" autocomplete="email">
+                        <p class="error-msg" role="alert"></p>
+                    </div>
+                    <div class="field">
+                        <label for="phone">Phone (optional)</label>
+                        <input type="tel" id="phone" name="phone" maxlength="20" autocomplete="tel" placeholder="012 345 6789">
+                        <p class="error-msg" role="alert"></p>
+                    </div>
+                    <div class="field">
+                        <label for="type">Type of message</label>
+                        <select id="type" name="type" required>
+                            <option value="">Choose a message type</option>
+                            <option value="general">General question</option>
+                            <option value="order">Order or re-order</option>
+                            <option value="branding">Custom branding</option>
+                            <option value="support">Problem with an order</option>
+                            <option value="feedback">Feedback</option>
+                        </select>
+                        <p class="error-msg" role="alert"></p>
+                    </div>
+                    <div class="field">
+                        <label for="message">Your message</label>
+                        <textarea id="message" name="message" required minlength="10" maxlength="1000" rows="6"></textarea>
+                        <p class="hint" id="message-count"></p>
+                        <p class="error-msg" role="alert"></p>
+                    </div>
+                    <div class="hp" aria-hidden="true">
+                        <label for="website">Leave this field empty</label>
+                        <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+                    </div>
+                    <button class="btn" type="submit">Create email</button>
+                    <div class="form-status" id="contact-status" role="status" aria-live="polite"></div>
+                </form>
+                <div class="quote" id="email-out" hidden></div>
+            </section>
+        </div>
+    </main>
+    
+        </section>
+    </main>
+    <script src="kayscript.js"></script>
+    <footer>
+        <p>&copy; Kay's Clothing Co. All rights reserved. 2026.</p>
+    </footer>
+</body>
+</html>
