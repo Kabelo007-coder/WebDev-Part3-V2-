@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enquiries</title>
+    <link rel="stylesheet" href= "mywebstyles.css">
+</head>
+<body>
+    <header>
+        <nav>
+        <ul>
+            <li><a href="index.html">Home</a> </li>
+            <li><a href="about.html">About Us</a> </li>
+            <li><a href="services.html">Our Services</a> </li>
+            <li><a href="gallery.html">Gallery</a> </li>
+            <li><a href="enquiries.html">Enquiries</a> </li>
+            <li><a href="contact.html">Contact Us</a> </li>
+        </ul>
+        </nav>
+        <h1>Enquiries</h1>
+        <img class="logo" src="_images/Kays-Clothing-Co-Logo-3.png" alt="Kay's Clothing Co Logo"> <br>
+    </header>
+    
+    <main> 
+    <section id="contact">
+        <h2>For Enquiries</h2>
+        <p>If you have any questions or inquiries, please feel free to reach out to us using the contact information below:</p>
+        <div class = "Container">
+        <div>   
+        <ul>
+            <li>Email: <a href="info@kaysclothingco.co.za">info@kaysclothingco.co.za</a></li>
+            <li>Phone: <a href="tel:+271234567890">+27 123 456 7890</a></li>
+            <li>Address: 239 Pretorius St, Pretoria Central, Pretoria, 0126</li>
+        </ul>
+        </div>
+        </div>
+    </section>
+    
+    <section aria-labelledby="form-title">
+                <h2 id="form-title">Fill Out Our Enquiry Form</h2>
+                <form id="enquiry-form" action="mailto:info@kaysclothingco.co.za" method="post" enctype="text/plain" novalidate autocomplete="on">
+                    <div class="field">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required minlength="2" maxlength="60" autocomplete="name">
+                        <p class="error-msg" role="alert"></p>
+                    </div>
+                    <div class="field">
+                        <label for="company">Company</label>
+                        <input type="text" id="company" name="company" required minlength="2" maxlength="80" autocomplete="organization">
+                        <p class="error-msg" role="alert"></p>
+                    </div>
+                    <div class="field">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required maxlength="254" autocomplete="email">
+                        <p class="error-msg" role="alert"></p>
+                    </div>
+                    <div class="field">
+                        <label for="phone">Phone (optional)</label>
+                        <input type="tel" id="phone" name="phone" maxlength="20" autocomplete="tel" placeholder="012 345 6789">
+                        <p class="error-msg" role="alert"></p>
+                    </div>
+                    <div class="field">
+                        <label for="product">Product of interest</label>
+                        <select id="product" name="product" required>
+                            <option value="">Choose a product</option>
+                            <option value="vest" data-price="189" data-stock="240" data-lead="7">Reflector Vests</option>
+                            <option value="belts" data-price="429" data-stock="0" data-lead="14">Tool Belts/Bags</option>
+                            <option value="jackets" data-price="549" data-stock="8" data-lead="12">Workwear Jackets</option>
+                            <option value="trousers" data-price="349" data-stock="120" data-lead="10">Workwear Trousers</option>
+                        </select>
+                        <p class="error-msg" role="alert"></p>
+                    </div>
+                    <div class="field">
+                        <label for="quantity">Quantity</label>
+                        <input type="number" id="quantity" name="quantity" required min="1" max="5000" step="1" inputmode="numeric">
+                        <p class="hint">10 or more items qualifies for a bulk discount.</p>
+                        <p class="error-msg" role="alert"></p>
+                    </div>
+                    <div class="field">
+                        <label for="branding">Branding</label>
+                        <select id="branding" name="branding" required>
+                            <option value="none">No branding</option>
+                            <option value="embroidery">Embroidered logo</option>
+                            <option value="print">Printed company name</option>
+                        </select>
+                        <p class="error-msg" role="alert"></p>
+                    </div>
+                    <div class="field">
+                        <label for="delivery">Date you need them by (optional)</label>
+                        <input type="date" id="delivery" name="delivery">
+                        <p class="error-msg" role="alert"></p>
+                    </div>
+                    <div class="field">
+                        <label for="message">Describe your product enquiry</label>
+                        <textarea id="message" name="message" required minlength="10" maxlength="1000" rows="5"></textarea>
+                        <div class="char-counter"><span id="message-length">0</span>/1000</div>
+                        <p class="error-msg" role="alert"></p>
+                    </div>
+                    <div class="hp" aria-hidden="true">
+                        <label for="website">Leave this field empty</label>
+                        <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+                    </div>
+                    <button class="btn" type="submit">Submit enquiry</button>
+                    <div class="form-status" id="enquiry-status" role="status" aria-live="polite"></div>
+                </form>
+                <div class="quote" id="quote" hidden aria-live="polite"></div>
+            </section>
+    </main>
+    <script>
+// Fix counter - use your actual IDs
+const messageBox = document.getElementById('message');
+const lengthSpan = document.getElementById('message-length');
+
+if(messageBox && lengthSpan){
+  // count as you type
+  messageBox.addEventListener('input', () => {
+    lengthSpan.textContent = messageBox.value.length;
+  });
+  
+  // also count if auto-filled from product page
+  lengthSpan.textContent = messageBox.value.length;
+}
+</script>
+    <script src="kayscript.js"></script>
+    <script src="products.js"></script>
+    <footer>
+
+        <p>&copy; Kay's Clothing Co. All rights reserved. 2026.</p>
+    </footer>
+    
+</body>
+</html>
